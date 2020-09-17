@@ -195,6 +195,21 @@ def main():
                                 transformed=transformed_dataset,
                                 output_path=operator.plot2_output_path)
 
+    results = defaultdict()
+    results['problem1'] = {}
+    results['problem1']['input'] = operator.dataset[0]
+    results['problem1']['areas'] = areas
+    results['problem1']['areas_mean'] = areas_mean
+    results['problem1']['areas_std'] = areas_std
+    results['problem1']['histogram'] = histogram
+    results['problem2'] = {}
+    results['problem2']['input'] = operator.dataset[0]
+    results['problem2']['transformed_dataset'] = transformed_dataset
+
+    logger.info(f'Save output to {operator.output_path}')
+    with open(operator.output_path, 'wb') as output_file:
+        pickle.dump(obj=results, file=output_file)
+
 
 
 if __name__ == '__main__':
