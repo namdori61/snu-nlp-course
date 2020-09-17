@@ -1,0 +1,12 @@
+# env
+.idea/
+
+# course
+Course/
+
+# data
+data/
+deeplearning_course/*.txt
+
+# etc
+leetcode.py
