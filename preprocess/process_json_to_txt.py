@@ -4,7 +4,7 @@ from tqdm import tqdm
 import logging
 import argparse
 
-parser = argparse.ArgumentParser(description='Generate input datset.')
+parser = argparse.ArgumentParser(description='Generate input dataset.')
 parser.add_argument('-i', '--input_dir', type=str, default=None,
                     help='Directory of files to process.')
 parser.add_argument('-o', '--output_path', type=str, default=None,
