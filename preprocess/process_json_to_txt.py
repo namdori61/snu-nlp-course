@@ -29,7 +29,7 @@ def main():
                 for d in data['document']:
                     for p in d['paragraph']:
                         text = p['form'].strip('"')
-                        output_file.write(text + ' \n')
+                        output_file.write('<p> ' + text + ' </p> \n')
                         sent_cnt += 1
     logger.info(f'Total {sent_cnt} text processed.')
 

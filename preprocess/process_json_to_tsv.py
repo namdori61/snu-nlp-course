@@ -37,7 +37,7 @@ def main():
                     original_topic = d['metadata']['original_topic']
                     for p in d['paragraph']:
                         text = p['form'].strip('"')
-                        writer.writerow([filename, date, publisher, topic, original_topic, '<p>' + text + '</p>'])
+                        writer.writerow([filename, date, publisher, topic, original_topic, '<p> ' + text + ' </p>'])
                         sent_cnt += 1
     logger.info(f'Total {sent_cnt} text processed.')
 
